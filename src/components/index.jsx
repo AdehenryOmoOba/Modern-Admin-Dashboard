@@ -10,7 +10,12 @@ export { default as Notification } from './Notification';
 export { default as UserProfile } from './UserProfile';
 export { default as SparkLine } from './charts/SparkLine'
 export { default as LineChart } from './charts/LineChart';
-export { default as Stacked } from './charts/StackedChart';
+export { default as StackedChart } from './charts/StackedChart';
 export { default as Pie } from './charts/PieChart';
 export { default as ChartsHeader } from './ChartsHeader';
 export { default as Header } from './Header';
+export { default as BarChart } from './charts/BarChart';
+export { default as AreaChart } from './charts/AreaChart';
+export { default as PyramidChart } from './charts/PyramidChart';
+export { default as FinancialChart } from './charts/FinancialChart';
+export { default as ColorMappingChart } from './charts/ColorMappingChart';

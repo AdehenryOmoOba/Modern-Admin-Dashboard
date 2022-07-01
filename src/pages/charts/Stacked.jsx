@@ -1,15 +1,15 @@
 import React from 'react'
-import {Header,PyramidChart} from '../../components'
+import {Header, StackedChart} from '../../components'
 
-const Pyramid = () => {
+const Stacked = () => {
   return (
     <div className='m-4 mt-24 p-10 bg-white rounded-3xl md:m-10 dark:bg-secondary-dark-bg'>
-    <Header category='Chart' title='Food Comparison Chart'/>
+    <Header category='Chart' title='Revenue Breakdown'/>
     <div className="w-full">
-      <PyramidChart />
+      <StackedChart />
     </div>
   </div>
   )
 }
 
-export default Pyramid
+export default Stacked

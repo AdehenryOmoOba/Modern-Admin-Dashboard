@@ -1,11 +1,13 @@
 import React from 'react'
 import {BsCurrencyDollar} from 'react-icons/bs'
 import {GoPrimitiveDot} from 'react-icons/go'
-import {Stacked, Pie,Button,SparkLine} from '../components'
-import {earningData,SparklineAreaData,ecomPieChartData} from '../data/dummyData'
+import {StackedChart,Button,SparkLine} from '../components'
+import {earningData,SparklineAreaData} from '../data/dummyData'
 import {useStateContext} from '../contexts/ContextProvider'
 
 const Ecommerce = () => {
+  const {currentColor} = useStateContext()
+
   return (
     <div className='mt-12'>
      <div className='flex flex-wrap justify-center lg:flex-nowrap'>
@@ -15,9 +17,12 @@ const Ecommerce = () => {
               <p className='font-bold text-gray-400'>Earnings</p>
               <p className='text-2xl'>$98,591.36</p>
             </div>
+            <button type="button" style={{ backgroundColor: currentColor }} className="text-2xl opacity-0.9 text-white hover:drop-shadow-xl rounded-full  p-4">
+              <BsCurrencyDollar />
+            </button>
           </div>
           <div className='mt-6'>
-            <Button color="white" bgColor="blue" text="Download" borderRadius="10px" size="md"/>
+            <Button color="white" bgColor={currentColor} text="Download" borderRadius="10px" size="md"/>
           </div>
        </div>
        <div className='flex m-3 flex-wrap justify-center gap-1 items-center'>
@@ -67,14 +72,15 @@ const Ecommerce = () => {
               <p className='text-gray-500 mt-1'>Expense</p>
             </div>
             <div className='mt-5'>
-              <SparkLine id='line-sparkline' color='blue' currentColor="blue" type='Line' height='80px' width='250px' data={SparklineAreaData} />
+              <SparkLine id='line-sparkLine' color={currentColor} currentColor={currentColor} type='Line' height='80px' width='250px' data={SparklineAreaData} />
             </div>
             <div className='mt-10'>
-              <Button color="white" bgColor='blue' text='Download Report' borderRadius='10px'/>
+              <Button color="white"
+               bgColor={currentColor} text='Download Report' borderRadius='10px'/>
             </div>
           </div>
           <div>
-           <Stacked width='320px' height='360px' />
+           <StackedChart width='320px' height='360px' />
           </div>
         </div>
       </div>

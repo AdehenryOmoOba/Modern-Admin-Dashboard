@@ -1,15 +1,16 @@
 import React from 'react'
-import {Header,PyramidChart} from '../../components'
+import { Header , BarChart} from '../../components'
 
-const Pyramid = () => {
+
+const Bar = () => {
   return (
     <div className='m-4 mt-24 p-10 bg-white rounded-3xl md:m-10 dark:bg-secondary-dark-bg'>
-    <Header category='Chart' title='Food Comparison Chart'/>
+    <Header category='Chart' title='Comodity Growth'/>
     <div className="w-full">
-      <PyramidChart />
+      <BarChart />
     </div>
   </div>
   )
 }
 
-export default Pyramid
+export default Bar
