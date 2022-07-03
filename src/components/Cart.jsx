@@ -1,13 +1,12 @@
 import React from 'react';
 import { MdOutlineCancel } from 'react-icons/md';
 import { AiOutlinePlus, AiOutlineMinus } from 'react-icons/ai';
-
 import { useStateContext } from '../contexts/ContextProvider';
 import { cartData } from '../data/dummyData';
 import { Button } from '.';
 
 const Cart = () => {
-  const { currentColor } = useStateContext();
+  const { currentColor,handleClose } = useStateContext();
 
   return (
     <div className="bg-half-transparent w-full fixed nav-item top-0 right-0 ">
@@ -20,6 +19,7 @@ const Cart = () => {
             bgHoverColor="light-gray"
             size="2xl"
             borderRadius="50%"
+            customFunc={() => handleClose('cart')}
           />
         </div>
         {cartData?.map((item, index) => (
