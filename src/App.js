@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Routes, Route } from "react-router-dom";
 import { FiSettings } from "react-icons/fi";
 import { TooltipComponent } from "@syncfusion/ej2-react-popups";
@@ -25,6 +25,7 @@ import {
 import "./App.css";
 import { useStateContext } from "./contexts/ContextProvider";
 import { ErrorBoundary } from "./pages/ErrorBoundary";
+
 
 function App() {
   const {
