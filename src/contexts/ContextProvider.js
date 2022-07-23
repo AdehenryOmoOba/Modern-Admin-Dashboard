@@ -19,8 +19,8 @@ export const ContextProvider = ({ children }) => {
   useEffect(() => {
     const savedThemeMode = localStorage.getItem("themeMode");
     const savedColorMode = localStorage.getItem("colorMode");
-    setCurrentMode(savedThemeMode);
-    setCurrentColor(savedColorMode);
+    setCurrentMode(savedThemeMode || "Light");
+    setCurrentColor(savedColorMode || "#1A97F5");
   }, []);
 
   const setMode = (e) => {
